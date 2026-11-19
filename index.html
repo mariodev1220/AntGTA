@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0610" />
+    <meta
+      name="description"
+      content="Grand Titty Anthropic ($GTA) — Solana meme coin. Unofficial parody. Not affiliated with Anthropic or Rockstar."
+    />
+    <title>Grand Titty Anthropic · $GTA</title>
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#stage">Skip to content</a>
+
+    <!-- RADIO BOOT -->
+    <div id="boot" class="boot" role="dialog" aria-label="System boot" aria-modal="true">
+      <div class="boot__panel">
+        <p class="boot__kicker">MDT CHANNEL · LEONIDA PD</p>
+        <div class="boot__ring" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <circle class="boot__track" cx="60" cy="60" r="52" />
+            <circle class="boot__bar" cx="60" cy="60" r="52" />
+          </svg>
+          <span class="boot__sun" aria-hidden="true"></span>
+          <span class="boot__pct" id="bootPct">00</span>
+        </div>
+        <pre class="boot__log" id="bootLog" aria-live="polite"></pre>
+        <button type="button" class="btn-plate boot__enter" id="bootEnter" disabled>
+          PRESS TO ENTER
+        </button>
+        <button type="button" class="boot__skip" id="bootSkip">Skip</button>
+      </div>
+    </div>
+
+    <!-- TOP HUD -->
+    <header class="hud" id="hud">
+      <div class="hud__brand">
+        <span class="hud__dot" aria-hidden="true"></span>
+        <span class="hud__ticker">$GTA</span>
+        <span class="hud__clock" id="hudClock">00:00:00</span>
+      </div>
+      <nav class="hud__nav" aria-label="Scenes">
+        <button type="button" class="hud__link is-active" data-go="cover">Cover</button>
+        <button type="button" class="hud__link" data-go="dossier">Dossier</button>
+        <button type="button" class="hud__link" data-go="sheet">Rap Sheet</button>
+        <button type="button" class="hud__link" data-go="bag">Get Bag</button>
+        <button type="button" class="hud__link" data-go="locker">Locker</button>
+        <button type="button" class="hud__link" data-go="wire">Wire</button>
+      </nav>
+      <div class="hud__actions">
+        <button type="button" class="btn-ghost" id="btnTour" title="Auto tour">AUTO</button>
+        <button type="button" class="btn-cash" data-buy>BUY</button>
+        <button type="button" class="hud__menu" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <div class="menu" id="menu" hidden>
+      <button type="button" data-go="cover">Cover</button>
+      <button type="button" data-go="dossier">Dossier</button>
+      <button type="button" data-go="sheet">Rap Sheet</button>
+      <button type="button" data-go="bag">Get Bag</button>
+      <button type="button" data-go="locker">Locker</button>
+      <button type="button" data-go="wire">Wire</button>
+      <button type="button" class="menu__close" id="menuClose">Close</button>
+    </div>
+
+    <!-- STAGE -->
+    <main id="stage" class="stage">
+      <div class="stage__plate" id="plate" aria-hidden="true">
+        <img
+          src="assets/hero-character.png"
+          alt=""
+          class="stage__hero"
+          id="heroImg"
+          width="1024"
+          height="1024"
+        />
+        <div class="stage__veil"></div>
+      </div>
+
+      <!-- COVER -->
+      <section class="scene is-active" id="scene-cover" data-scene="cover">
+        <div class="panel panel--cover">
+          <p class="mono kicker">WANTED · SOLANA STREETS</p>
+          <h1 class="display" data-scramble="GRAND TITTY ANTHROPIC">
+            GRAND TITTY ANTHROPIC
+          </h1>
+          <p class="lede">
+            The model that finally has a personality. $GTA — unofficial parody energy on Solana.
+          </p>
+          <div class="cta-row">
+            <button type="button" class="btn-cash" data-buy>BUY $GTA</button>
+            <button type="button" class="btn-glass" data-x>X / TWITTER</button>
+            <button type="button" class="btn-chart" data-chart>CHART</button>
+          </div>
+          <div class="ca-plate" role="group" aria-label="Contract address">
+            <span class="ca-plate__tag">CA</span>
+            <code class="ca-plate__val" data-ca>TBA</code>
+            <button type="button" class="btn-plate ca-plate__copy" data-copy>COPY</button>
+          </div>
+          <p class="anti">Verify CA. Scammers exist. NFA.</p>
+        </div>
+      </section>
+
+      <!-- DOSSIER -->
+      <section class="scene" id="scene-dossier" data-scene="dossier" hidden>
+        <div class="panel panel--sheet">
+          <p class="mono kicker">FILE · SUBJECT</p>
+          <h2 class="display h2">THE DOSSIER</h2>
+          <p class="body">
+            She walked out of a training run with a bandana, a bomber, and a bag that prints itself.
+            Grand Titty Anthropic is a Solana street meme — GTA cover heat mashed with Anthropic
+            parody lore. Same face. Same fit. Different mission every scroll.
+          </p>
+          <ul class="facts">
+            <li><span>Alias</span><strong>$GTA</strong></li>
+            <li><span>Chain</span><strong>Solana</strong></li>
+            <li><span>Status</span><strong>At large</strong></li>
+            <li><span>Vibe</span><strong>Cover art chaos</strong></li>
+          </ul>
+          <div class="wanted-meter" id="wantedMeter">
+            <p class="mono">WANTED LEVEL</p>
+            <div class="stars" role="group" aria-label="Wanted level">
+              <button type="button" data-star="1" aria-label="Level 1">★</button>
+              <button type="button" data-star="2" aria-label="Level 2">★</button>
+              <button type="button" data-star="3" aria-label="Level 3">★</button>
+              <button type="button" data-star="4" aria-label="Level 4">★</button>
+              <button type="button" data-star="5" aria-label="Level 5">★</button>
+            </div>
+            <p class="wanted-meter__status" id="wantedStatus">Quiet afternoon</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RAP SHEET -->
+      <section class="scene" id="scene-sheet" data-scene="sheet" hidden>
+        <div class="panel panel--sheet">
+          <p class="mono kicker">CHARGES · TOKEN FILE</p>
+          <h2 class="display h2">RAP SHEET</h2>
+          <p class="body warn">
+            pump.fun defaults, not on-chain verified. Figures below are launch-template language only.
+          </p>
+          <div class="charges">
+            <article>
+              <h3>Supply</h3>
+              <p>1,000,000,000</p>
+            </article>
+            <article>
+              <h3>Tax</h3>
+              <p>0 / 0</p>
+            </article>
+            <article>
+              <h3>LP</h3>
+              <p>pump.fun curve</p>
+            </article>
+            <article>
+              <h3>Chain</h3>
+              <p>Solana</p>
+            </article>
+          </div>
+          <div class="ca-plate">
+            <span class="ca-plate__tag">CA</span>
+            <code class="ca-plate__val" data-ca>TBA</code>
+            <button type="button" class="btn-plate ca-plate__copy" data-copy>COPY</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- GET BAG -->
+      <section class="scene" id="scene-bag" data-scene="bag" hidden>
+        <div class="panel panel--sheet">
+          <p class="mono kicker">MISSION · ACQUIRE</p>
+          <h2 class="display h2">GET THE BAG</h2>
+          <ol class="mission" id="missionList">
+            <li data-step>
+              <button type="button" class="mission__check" aria-pressed="false"></button>
+              <div>
+                <h3>Wallet up</h3>
+                <p>Install a Solana wallet and fund with SOL.</p>
+              </div>
+            </li>
+            <li data-step>
+              <button type="button" class="mission__check" aria-pressed="false"></button>
+              <div>
+                <h3>Hit the swap</h3>
+                <p>Open Buy — routes SOL → $GTA when CA is live.</p>
+              </div>
+            </li>
+            <li data-step>
+              <button type="button" class="mission__check" aria-pressed="false"></button>
+              <div>
+                <h3>Verify CA</h3>
+                <p>Match the address on this site. No DMs. No “support.”</p>
+              </div>
+            </li>
+            <li data-step>
+              <button type="button" class="mission__check" aria-pressed="false"></button>
+              <div>
+                <h3>Ride out</h3>
+                <p>Hold the bag. Follow the wire. Stay sharp.</p>
+              </div>
+            </li>
+          </ol>
+          <div class="cta-row">
+            <button type="button" class="btn-cash" data-buy>BUY $GTA</button>
+            <button type="button" class="btn-glass" data-x>FOLLOW X</button>
+          </div>
+
+          <div class="minigame" id="catchGame">
+            <p class="mono">SET PIECE · CATCH THE BAG</p>
+            <p class="minigame__hint">Tap when the bar hits the green zone. Best saved locally.</p>
+            <div class="catch">
+              <div class="catch__track">
+                <i class="catch__zone" aria-hidden="true"></i>
+                <b class="catch__needle" id="catchNeedle"></b>
+              </div>
+              <button type="button" class="btn-plate" id="catchBtn">CATCH</button>
+            </div>
+            <p class="minigame__score">
+              Streak <strong id="catchStreak">0</strong> · Best
+              <strong id="catchBest">0</strong>
+            </p>
+            <button type="button" class="btn-ghost" id="catchShare">SHARE STREAK</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCKER -->
+      <section class="scene" id="scene-locker" data-scene="locker" hidden>
+        <div class="panel panel--sheet">
+          <p class="mono kicker">EVIDENCE · MEDIA</p>
+          <h2 class="display h2">THE LOCKER</h2>
+          <p class="body">Official stills from the cover shoot. Tap to enlarge.</p>
+          <div class="locker-grid">
+            <button type="button" class="locker-card" data-lightbox="assets/hero-character.png">
+              <img src="assets/hero-character.png" alt="Cover portrait of Grand Titty Anthropic" />
+              <span>Portrait</span>
+            </button>
+            <button type="button" class="locker-card" data-lightbox="assets/gta-banner-3x1.jpg">
+              <img src="assets/gta-banner-3x1.jpg" alt="City banner for Grand Titty Anthropic" />
+              <span>Banner</span>
+            </button>
+          </div>
+          <div class="collect" id="collectibles">
+            <p class="mono">HIDDEN TAGS · FIND ALL THREE</p>
+            <div class="collect__row">
+              <button type="button" class="collect__chip" data-egg="bandana">BANDANA</button>
+              <button type="button" class="collect__chip" data-egg="sun">SUNBURST</button>
+              <button type="button" class="collect__chip" data-egg="bomber">BOMBER</button>
+            </div>
+            <p class="collect__status" id="eggStatus">0 / 3 recovered</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WIRE / CHART -->
+      <section class="scene" id="scene-wire" data-scene="wire" hidden>
+        <div class="panel panel--sheet">
+          <p class="mono kicker">LIVE WIRE · CHART</p>
+          <h2 class="display h2">THE WIRE</h2>
+          <p class="body" id="wireCopy">
+            Chart arms when the contract drops. Until then, the wire stays dark.
+          </p>
+          <div class="wire-frame" id="wireFrame">
+            <div class="wire-overlay" id="wireOverlay">
+              <p>CHART ACTIVATES AT LAUNCH</p>
+              <button type="button" class="btn-cash" data-buy>BUY WHEN LIVE</button>
+            </div>
+            <iframe
+              id="chartFrame"
+              title="DexScreener chart"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            ></iframe>
+          </div>
+          <div class="cta-row">
+            <button type="button" class="btn-chart" data-chart>OPEN DEXSCREENER</button>
+            <button type="button" class="btn-glass" data-tg>TELEGRAM</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- RADIO WHEEL -->
+    <div class="radio" id="radio" aria-label="Scene radio">
+      <button type="button" class="radio__dial" id="radioDial" aria-label="Cycle scene">◉</button>
+      <p class="radio__label" id="radioLabel">COVER</p>
+    </div>
+
+    <!-- MOBILE DOCK -->
+    <nav class="dock" aria-label="Quick actions">
+      <button type="button" class="btn-cash" data-buy>BUY</button>
+      <button type="button" class="btn-plate" data-copy>CA</button>
+      <button type="button" class="btn-glass" data-x>X</button>
+    </nav>
+
+    <!-- LIGHTBOX -->
+    <dialog class="lb" id="lightbox">
+      <img id="lbImg" alt="" />
+      <form method="dialog">
+        <button type="submit" class="btn-plate">CLOSE</button>
+      </form>
+    </dialog>
+
+    <!-- OVERLAYS -->
+    <div class="stamp" id="missionStamp" hidden aria-live="assertive">MISSION PASSED</div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <footer class="foot">
+      <p>
+        Unofficial fan meme. Not affiliated with Anthropic, Rockstar Games, Take-Two, or any related
+        brands or people. Entertainment only. NFA. DYOR.
+      </p>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
